@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <a href=><title>Small covers and Wedges</title></a>
+    </head>
+    <body>
+        <h1><a href={%url 'home'  %}> Small covers </a>
+            
+        </h1>
+        <form  action="{% url 'result2' %}" method="post">
+            {% csrf_token %}
+        <p>
+            <label for="result3">input</label>
+            <input type="text" name="result3" value="{{result3}}" readonly >
+        </p>
+        <p>
+            <label for="result1">simplicial complex:</label>
+            <input type="text" name="result1" value="{{result1}}" style="width:5000px;" readonly >
+        </p>
+        <p>
+            <label for="result5">The collection of set of same vertices before wedges:</label>
+            <input type="text" name="result5" value="{{result5}}" style="width:5000px;" readonly >
+        </p>
+        <p>
+            <label for="result2">Characteristic functions:</label>
+            <input type="text" name="result2" value="{{result2}}" style="width:5000px;" readonly >
+        </p>
+        <p>
+            <label for="result4">The number of characteristic functions:</label>
+            <input type="text" name="result4" value="{{result4}}" style="width:5000px;" readonly >
+        </p>
+        <p>
+            <label for="nth">'n-th' characteristic function:</label>
+            <input type="number" name="nth" style="width:40px;" value="1" min="1">
+            <input type="text" name="nthcf" value="{{nthcf}}" style="width:5000px;"readonly >
+        </p>
+        <p>
+            <label for="dg">Diagrams:</label>
+            <input type="text" name="dg" value="{{dg}}" style="width:5000px;"  readonly >
+        </p>
+        <p>
+            <label for="nth2">Characteristic functions adjacent to the above one at 'n-th' vertex in diagram:</label>
+            <input type="number" name="nth2" style="width:40px;" value="1" min="1" >
+            <input type="DN" name="DN" value="{{DN}}" style="width:5000px;"readonly>
+        </p>
+        <p>
+            <button type="submit" name="submit">OK</button>
+        </p>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Small covers</title>
+    </head>
+    <body>
+        <h1>Small covers and Wedges</h1>
+        <form action="{% url 'result' %}" method="post">
+            {% csrf_token %}
+        <p>
+            <label for="FP">Set of facets:</label>
+            <input type="text" name="FP" value="[[1,2],]" style="width:500px;">
+        </p>
+        <p>
+            (Must input [1,...,n])
+        <p>
+        <p>
+            <label for="J">Wedges:</label>
+            <input type="text" name="J" value="[1,1,1]" style="width:500px;">
+        </p>
+
+        <p>
+            <button type="submit" name="submit">OK</button>
+        </p>
+        </form>
+    </body>
+</html>
